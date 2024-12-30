@@ -1,0 +1,39 @@
+
+Create a Singleton Class.
+
+Abc.java
+
+public class Abc {
+
+   //create an object of SingleObject
+   private static Abc instance = new Abc();
+
+   //make the constructor private so that this class cannot be
+   //instantiated
+   private Abc(){}
+
+   //Get the only object available
+   public static Abc getInstance(){
+      return instance;
+   }
+
+   public void showMessage(){
+      System.out.println("Hello World!");
+   }
+}
+
+
+Get the only object from the singleton class.
+
+Xyz.java
+
+public class Xyz {
+   public static void main(String[] args) {
+
+       //Get the only object available
+      Abc object = Abc.getInstance();
+
+      //show the message
+      object.showMessage();
+   }
+}
